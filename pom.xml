@@ -15,7 +15,14 @@
 		  <groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-war-plugin</artifactId>
 		  <configuration>
-		    <webXml>WebContent\WEB-INF\web.xml</webXml>        
+		    <webXml>WebContent\WEB-INF\web.xml</webXml>
+		    <webResources>
+				<resource>
+					<targetPath>.</targetPath>
+					<directory>WebContent</directory>
+					<filtering>true</filtering>
+				</resource>
+			</webResources>        
 		  </configuration>
 		</plugin>
 	</plugins>
