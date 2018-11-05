@@ -3,12 +3,11 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo Build started on `date`
-      - mvn test
+       - mvn clean install
   post_build:
     commands:
-      - echo Build completed on `date`
       - mvn package
 artifacts:
   files:
-    - target/Sample.war
+    - '**/*'
+  base-directory: 'target/Sample'
